@@ -1,6 +1,6 @@
 ﻿namespace MovingWindow
 {
-    partial class Form1
+    partial class WindowMovingForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,12 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.MoveFormTimer = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // MoveFormTimer
+            // 
+            this.MoveFormTimer.Tick += new System.EventHandler(this.MoveFormTimer_Tick);
+            // 
+            // WindowMovingForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(280, 258);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.Name = "WindowMovingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Move Window Form";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WindowMovingForm_KeyDown);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer MoveFormTimer;
     }
 }
 
