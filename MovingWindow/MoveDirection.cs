@@ -1,7 +1,10 @@
-﻿public enum MoveDirection
+﻿namespace MovingWindow
 {
-    Right,
-    Left,
-    Up,
-    Down
+    public enum MoveDirection
+    {
+        Right,
+        Left,
+        Up,
+        Down
+    }
 }
