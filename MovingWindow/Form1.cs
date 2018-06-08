@@ -16,6 +16,7 @@ namespace MovingWindow
 
         private void WindowMovingForm_KeyDown(object sender, KeyEventArgs e)
         {
+            MoveFormTimer.Start();
             DirectionControler(e.KeyCode);
         }
 
