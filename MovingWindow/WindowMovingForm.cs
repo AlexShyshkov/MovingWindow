@@ -14,12 +14,6 @@ namespace MovingWindow
             InitializeComponent();
         }
 
-        private void WindowMovingForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            MoveFormTimer.Start();
-            DirectionControler(e.KeyCode);
-        }
-
         private void DirectionControler(Keys key)
         {
             MoveFormTimer.Start();
@@ -118,6 +112,12 @@ namespace MovingWindow
                     }
                     break;
             }
+        }
+
+        private void WindowMovingForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            MoveFormTimer.Start();
+            DirectionControler(e.KeyCode);
         }
     }
 }
