@@ -6,13 +6,13 @@ namespace MovingWindow
 {
     public partial class WindowMovingForm : Form
     {
+        private const int moveStep = 6;
+        private MoveDirection moving;
+
         public WindowMovingForm()
         {
             InitializeComponent();
         }
-
-        private int moveStep = 6;
-        private MoveDirection moving;
 
         private void WindowMovingForm_KeyDown(object sender, KeyEventArgs e)
         {
